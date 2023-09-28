@@ -6,6 +6,7 @@
   line-height: 1.5;
   color: white;
   font-family: 'Mukta';
+  overflow: hidden;
   outline: 1px solid cyan;
   box-sizing: border-box;
 }
@@ -32,38 +33,69 @@ li{
   -webkit-background-clip: text;
   transition: border-bottom 0.2s ease-in-out;
 }
+li.active {
+  border-bottom: 2px solid red;
+}
 li:hover {
   border-bottom: 2px solid red;
 }
 .description{
   display: flex;
-  margin-top: 10em;
+  margin: 8em 2em 0 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
 }
 .myname{
   width: 60%;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .topHeading{
   color: red;
-  word-wrap: break-word;
+  word-break: keep-all;
 }
 .blue{
   color: blue;
+  text-align: center;
 }
 .hello{
   padding: 0.1em;
-  font-size: 3em;
+  font-size: clamp(1.5em,4vw,3em);
   text-align: center;
+  width: 100%;
   letter-spacing: 2px;
+  width: 100%;
+  position: relative;
+  left: clamp(-200%,5%,-300%);
+  animation: slideFromLeft 1s forwards;
+}
+@keyframes slideFromLeft {
+  to {
+    left: 0;
+  }
 }
 .imageContainer{
-  width: clamp(200px,50%,500px);
-  height: 500px;
+  width: clamp(200px,30vw,500px);
+  height: clamp(200px,30vw,500px);
   margin: auto;
   position: relative;
+  right: clamp(-200%,5%,-300%);
   border-radius: 1rem;
   animation: shadow 4s linear infinite ;
+  animation: slideFromRight 1s forwards;
 }
+@keyframes slideFromRight {
+  to {
+    right: 0;
+  }
+}
+
+img {
+  right: clamp(-200%,5%,-300%);
+  width: clamp(200px,30vw,500px);
+  height: clamp(200px,30vw,500px);
+}
+
 @keyframes shadow {
   0% {
     box-shadow: 0 0 60px rgba(255, 0, 0, 0.306);
