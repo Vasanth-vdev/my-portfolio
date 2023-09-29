@@ -6,9 +6,9 @@
   line-height: 1.5;
   color: white;
   font-family: 'Mukta';
-  overflow: hidden;
   outline: 1px solid cyan;
   box-sizing: border-box;
+  height: auto;
 }
 .header{
   display : flex;
@@ -74,26 +74,24 @@ li:hover {
     left: 0;
   }
 }
+img {
+  right: clamp(-200%,5%,-300%);
+  width: clamp(200px,30vw,500px);
+  height: clamp(200px,30vw,500px);
+}
 .imageContainer{
   width: clamp(200px,30vw,500px);
   height: clamp(200px,30vw,500px);
-  margin: auto;
+  margin: 2rem auto;
   position: relative;
   right: clamp(-200%,5%,-300%);
   border-radius: 1rem;
-  animation: shadow 4s linear infinite ;
-  animation: slideFromRight 1s forwards;
+  animation: shadow 4s linear infinite,slideFromRight 1s forwards ;
 }
 @keyframes slideFromRight {
   to {
     right: 0;
   }
-}
-
-img {
-  right: clamp(-200%,5%,-300%);
-  width: clamp(200px,30vw,500px);
-  height: clamp(200px,30vw,500px);
 }
 
 @keyframes shadow {
@@ -106,4 +104,7 @@ img {
   100% {
     box-shadow: 0 0 60px rgba(255, 0, 0, 0.306);
   }
+}
+.skillsPage {
+  margin-top: 20em;
 }
