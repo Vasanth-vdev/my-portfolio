@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Mulish:wght@600&family=Poppins:wght@300;500&display=swap');
 *{
+  scroll-behavior: smooth;
   background-color: black;
   margin : 0;
   padding : 0;
@@ -8,17 +9,30 @@
   font-family: 'Mukta';
   outline: 1px solid cyan;
   box-sizing: border-box;
+  overflow-wrap: break-word;  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.root {
+  margin: 0 2em;
   height: auto;
 }
+
 .header{
+  height: fit-content;
   display : flex;
   justify-content: space-evenly;
   padding : 6px 0px;
   box-shadow: 0 4px 6px rgba(255,255,255,0.2);
   position: sticky;
   top: 0;
+  overflow: hidden;
   z-index: 999;
 }
+.scrollBar {
+  padding-top: 15em;
+} 
 li{
   list-style-type: none;
   font-size: 1.3rem;
@@ -41,7 +55,6 @@ li:hover {
 }
 .description{
   display: flex;
-  margin: 8em 2em 0 2em;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2em;
@@ -65,17 +78,17 @@ li:hover {
   width: 100%;
   letter-spacing: 2px;
   width: 100%;
-  position: relative;
-  left: clamp(-200%,5%,-300%);
-  animation: slideFromLeft 1s forwards;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  animation: opacity 2s forwards;
 }
-@keyframes slideFromLeft {
+@keyframes opacity {
   to {
-    left: 0;
+    opacity: 1;
   }
 }
+
 img {
-  right: clamp(-200%,5%,-300%);
   width: clamp(200px,30vw,500px);
   height: clamp(200px,30vw,500px);
 }
@@ -83,14 +96,14 @@ img {
   width: clamp(200px,30vw,500px);
   height: clamp(200px,30vw,500px);
   margin: 2rem auto;
-  position: relative;
-  right: clamp(-200%,5%,-300%);
   border-radius: 1rem;
-  animation: shadow 4s linear infinite,slideFromRight 1s forwards ;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  animation:imageOpacity 2s forwards ;
 }
-@keyframes slideFromRight {
+@keyframes imageOpacity {
   to {
-    right: 0;
+    opacity: 1;
   }
 }
 
@@ -107,4 +120,5 @@ img {
 }
 .skillsPage {
   margin-top: 20em;
+  width: 100%;
 }

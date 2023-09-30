@@ -10,7 +10,8 @@ const AboutPage = () => {
     loop : {},
   })
   return (
-    <div>
+    <>
+    <div className='scrollBar'>
       <div className='description'>
         <div className='myname'>
           <p className='hello'>HI👋🏻,<br/>
@@ -22,10 +23,9 @@ const AboutPage = () => {
           className='show' width={500} height={500} src={photo} />
         </div>
       </div>
-      <div>
-        <SkillsPage />
-      </div>
+      <SkillsPage />
     </div>
+    </>
   )
 }
 

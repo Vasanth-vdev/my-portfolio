@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
  const Layout = () => {
     const [activeTab,setActiveTab] = useState('about')
@@ -8,7 +8,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
         setActiveTab(tabName)
       }
   return (
-    <div>
+    <div className='root'>
       <div className='header'>
           <li className={activeTab === 'about' ? 'active' : ''}
           onClick={() => handleTab('about')}>About</li>
