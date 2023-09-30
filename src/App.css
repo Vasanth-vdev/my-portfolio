@@ -15,7 +15,6 @@
   display: none;
 }
 .root {
-  margin: 0 2em;
   height: auto;
 }
 
@@ -29,9 +28,11 @@
   top: 0;
   overflow: hidden;
   z-index: 999;
+  width: 100%;
 }
 .scrollBar {
   padding-top: 15em;
+  margin: 0 2em;
 } 
 li{
   list-style-type: none;
@@ -95,11 +96,11 @@ img {
 .imageContainer{
   width: clamp(200px,30vw,500px);
   height: clamp(200px,30vw,500px);
-  margin: 2rem auto;
+  margin: 1rem auto;
   border-radius: 1rem;
   opacity: 0;
   transition: opacity 1s ease-in;
-  animation:imageOpacity 2s forwards ;
+  animation:imageOpacity 2s forwards,shadow 3s infinite ;
 }
 @keyframes imageOpacity {
   to {
@@ -118,7 +119,33 @@ img {
     box-shadow: 0 0 60px rgba(255, 0, 0, 0.306);
   }
 }
+.myPassion {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+}
+.paragraph {
+  color: gray;
+  font-size: clamp(1rem,2vw,1.2rem);
+}
+.resume-contact {
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  margin: 2em 0;
+}
+.contactBtn,.resumeBtn {
+  font-size: clamp(0.6em,2vw,1em);
+  line-height: 1.5;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,255,0.3);
+  transition: border 1s ease-in;
+}
+.contactBtn:hover,.resumeBtn:hover {
+  background-color: rgba(0,0,255,0.3);
+  box-shadow: 0 0 5px rgba(0,0,255,0.3);
+}
 .skillsPage {
-  margin-top: 20em;
+  margin-top: 15em;
   width: 100%;
 }
