@@ -11,6 +11,10 @@
   box-sizing: border-box;
   overflow-wrap: break-word;  
 }
+:root {
+  --desired-width : 8vw;
+  --desired-height : 12vw;
+}
 ::-webkit-scrollbar {
   display: none;
 }
@@ -156,13 +160,15 @@ img {
 }
 .flexGroup {
   display: grid;
-  gap: 10rem;
-  margin:5rem 15rem;
+  place-items: center;
+  gap: 8rem;
+  margin:5rem 10rem;
   grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
 }
 .grid-child {
+  width: clamp(80px,8vw,200px);
   text-align: center;
-  height: 100px;
+  height: clamp(50px,6vw,150px);
 }
 .myskills {
   background-image: linear-gradient(to right,blue,blue,blue,red,red,red);
