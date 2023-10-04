@@ -14,6 +14,8 @@
 :root {
   --desired-width : 8vw;
   --desired-height : 12vw;
+  --desired-icon-width : 1vw;
+  --desired-icon-height : 2vw;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -35,7 +37,7 @@
   width: 100%;
 }
 .scrollBar {
-  padding-top: 15em;
+  padding-top: 10em;
   margin: 0 2em;
 } 
 li{
@@ -75,14 +77,14 @@ li:hover {
 .blue{
   color: blue;
   text-align: center;
+  word-wrap: break-word;
 }
 .hello{
   padding: 0.1em;
-  font-size: clamp(1.5em,4vw,3em);
+  font-size: clamp(0.9em,4vw,3em);
   text-align: center;
   width: 100%;
   letter-spacing: 2px;
-  width: 100%;
   opacity: 0;
   transition: opacity 1s ease-in;
   animation: opacity 2s forwards;
@@ -144,11 +146,13 @@ img {
   border-radius: 10px;
   border: 2px solid rgba(0,0,255,0.3);
   transition: border 1s ease-in;
+  text-decoration: none;
 }
 .contactBtn:hover,.resumeBtn:hover {
   background-color: rgba(0,0,255,0.3);
   box-shadow: 0 0 5px rgba(0,0,255,0.3);
 }
+
 .skillsPage {
   margin-top: 15em;
   width: 100%;
@@ -158,21 +162,110 @@ img {
   text-align: center;
   letter-spacing: 3px;
 }
-.flexGroup {
+.gridGroup {
   display: grid;
   place-items: center;
-  gap: 8rem;
-  margin:5rem 10rem;
-  grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+  gap: 3rem;
+  width: clamp(200px,60vw,800px);
+  margin: 1em auto;
+  height: clamp(550px,60vw,700px);
+  grid-template-columns: repeat(3,1fr);
 }
 .grid-child {
-  width: clamp(80px,8vw,200px);
+  width: clamp(30px,6vw,200px);
   text-align: center;
-  height: clamp(50px,6vw,150px);
+  box-shadow: 0 0 20px rgba(0,0,255,0.5);
+  height: clamp(30px,6vw,150px);
 }
 .myskills {
   background-image: linear-gradient(to right,blue,blue,blue,red,red,red);
   color : transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+.svg-font {
+  font-size: clamp(10px,2vw,1rem);
+  white-space: nowrap;
+}
+/* Project Page */
+.projectPage {
+  margin-top: 15em;
+}
+.my-project {
+  color : transparent;
+  background-image: linear-gradient(to right,blue,blue,blue,red,red,red);
+  letter-spacing: 3px;
+  background-clip: text;
+  text-transform:uppercase;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: clamp(1rem,4vw,2.5rem);
+}
+.project-container {
+  width: clamp(250px,60vw,800px);
+  height: clamp(250px,60vh,500px);
+  margin: auto;
+  border: 1px solid gold;
+}
+/*Contact page */
+.contact-page {
+  margin: 15em auto 1em auto;
+  width: fit-content;
+  height: auto;
+}
+.responsive {
+  width: clamp(200px,50vw,550px);
+}
+.contact-header {
+  text-align: center;
+  color : transparent;
+  background-image: linear-gradient(to right,blue,blue,blue,red,red,red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: clamp(0.8rem,2vw,2rem);
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.contact-info input{
+  padding: clamp(3px,1vw,8px);
+  border-radius: 8px;
+  border: 1px solid gold;
+  outline: none;
+}
+.contact-info input:focus {
+  outline: 1px solid gold;
+}
+.contact-info textarea {
+  border: 1px solid gold;
+  resize: none;
+  border-radius: 8px;
+  height: 200px;
+  outline: none;
+}
+.contact-info textarea:focus {
+  outline : 1px solid gold;
+}
+.contact-info button {
+  outline: none;
+  border: none;
+  width: fit-content;
+  padding: 6px 8px;
+  background-color: gold;
+  white-space: nowrap;
+  font-size: clamp(0.5rem,2vw,1rem);
+  border-radius: 50px;
+  margin: auto;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.icon-resp {
+  text-align: center;
+  box-shadow: 0 0 5px rgb(245, 147, 10);
 }

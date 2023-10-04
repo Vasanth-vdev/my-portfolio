@@ -3,6 +3,8 @@ import {Cursor} from 'react-simple-typewriter'
 import photo from '../assets/photo.jpg'
 import {useTypewriter} from 'react-simple-typewriter'
 import SkillsPage from './SkillsPage'
+import ProjectPage from './ProjectPage'
+import ContactPage from './contactPage'
 
 const AboutPage = () => {
   const [text] = useTypewriter({
@@ -32,9 +34,11 @@ const AboutPage = () => {
       </div>
       <div className='resume-contact'>
           <button className='contactBtn'>Contact me</button>
-          <button className='resumeBtn' download>My Resume</button>
+          <a className='resumeBtn' download="myresume" href='./src/assets/resumepdf.pdf'>My Resume</a>
         </div>
       <SkillsPage />
+      <ProjectPage />
+      <ContactPage />
     </div>
     </>
   )
