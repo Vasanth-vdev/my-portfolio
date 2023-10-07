@@ -13,7 +13,7 @@ const AboutPage = () => {
   })
   return (
     <>
-    <div className='scrollBar'>
+    <div id='AboutPage' className='scrollBar'>
       <div className='description'>
         <div className='myname'>
           <p className='hello'>HI👋🏻,<br/>

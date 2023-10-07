@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Mulish:wght@600&family=Poppins:wght@300;500&display=swap');
 *{
-  scroll-behavior: smooth;
   background-color: black;
   margin : 0;
   padding : 0;
   line-height: 1.5;
   color: white;
   font-family: 'Mukta';
-  outline: 1px solid cyan;
   box-sizing: border-box;
-  overflow-wrap: break-word;  
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+  scroll-padding: 8rem;
 }
 :root {
   --desired-width : 8vw;
@@ -23,7 +23,7 @@
 .root {
   height: auto;
 }
-
+/* layout page */
 .header{
   height: fit-content;
   display : flex;
@@ -36,6 +36,7 @@
   z-index: 999;
   width: 100%;
 }
+/* About page */
 .scrollBar {
   padding-top: 10em;
   margin: 0 2em;
@@ -47,15 +48,19 @@ li{
   letter-spacing: 2px;
   padding: 2px 8px;
   border-top: 2px solid blue;
-  background-image: linear-gradient(to right,blue,red);
   border-radius: 1em;
-  color : transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
   transition: border-bottom 0.2s ease-in-out;
 }
 li.active {
   border-bottom: 2px solid red;
+}
+li a {
+  background-image: linear-gradient(to right,blue,red);
+  color : transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-decoration: none;
+  outline: none;
 }
 li:hover {
   border-bottom: 2px solid red;
@@ -152,7 +157,7 @@ img {
   background-color: rgba(0,0,255,0.3);
   box-shadow: 0 0 5px rgba(0,0,255,0.3);
 }
-
+/* skills page */
 .skillsPage {
   margin-top: 15em;
   width: 100%;
@@ -259,6 +264,7 @@ img {
   font-size: clamp(0.5rem,2vw,1rem);
   border-radius: 50px;
   margin: auto;
+  cursor: pointer;
 }
 .footer {
   display: flex;
@@ -268,4 +274,11 @@ img {
 .icon-resp {
   text-align: center;
   box-shadow: 0 0 5px rgb(245, 147, 10);
+}
+
+.header-logo {
+  width: clamp(30px,2vw,50px);
+  height: fit-content;
+  box-shadow: 0 0 5px rgba(0,0,255);
+  cursor: pointer;
 }
