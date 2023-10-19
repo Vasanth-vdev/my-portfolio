@@ -3,7 +3,6 @@ const app = express()
 const nodeMailer = require('nodemailer')
 const {google} = require('googleapis')
 const cors = require('cors')
-const config = require('./config')
 const { oauth2 } = require('googleapis/build/src/apis/oauth2')
 const { Await } = require('react-router-dom')
 const Oauth2 = google.auth.OAuth2
