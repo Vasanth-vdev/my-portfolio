@@ -16,7 +16,7 @@ const ContactPage = () => {
   async function sendMail(e) {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:4202/email',info)
+      const response = await axios.post('http://localhost:4202/email',info, {withCredentials : true})
       if(response) {
       console.log('Email sent successfully!')
       }
