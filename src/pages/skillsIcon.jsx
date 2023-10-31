@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const SkillsIcon = () => {
+  useEffect(() => {
+    Aos.init({duration : 2000})
+  },[])
   return (
     <div>
         <div className='gridGroup'>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
          width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 48 48">
@@ -12,7 +17,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>HTML</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height)150px)`} viewBox="0 0 48 48">
@@ -20,7 +25,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>CSS</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 48 48">
@@ -28,7 +33,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>JAVASCRIPT</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(50px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 100 100">
@@ -36,7 +41,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>REACT</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 48 48">
@@ -44,7 +49,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>NODEJS</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 64 64">
@@ -52,7 +57,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>EXPRESSJS</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 32 32"><path d="M15.9.087l.854 1.604c.192.296.4.558.645.802.715.715 1.394 1.464 2.004 2.266 1.447 1.9 2.423 4.01 3.12 6.292.418 1.394.645 2.824.662 4.27.07 4.323-1.412 8.035-4.4 11.12-.488.488-1.01.94-1.57 1.342-.296 0-.436-.227-.558-.436-.227-.383-.366-.82-.436-1.255-.105-.523-.174-1.046-.14-1.586v-.244C16.057 24.21 15.796.21 15.9.087z" fill="#599636"/>
@@ -60,7 +65,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>MONGODB</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 48 48">
@@ -68,7 +73,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>MONGOOSE</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 32 32">
@@ -76,7 +81,7 @@ const SkillsIcon = () => {
           </svg>
           <strong className='svg-font'>GIT</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 48 48">
@@ -84,7 +89,7 @@ const SkillsIcon = () => {
         </svg>
         <strong className='svg-font'>TAILWINDCSS</strong>
         </div>
-        <div className='grid-child'>
+        <div className='grid-child' data-aos = 'fade-right'>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
         width={`clamp(100px, var(--desired-width), 200px)`}
          height={`clamp(100px,var(--desired-height,150px))`} viewBox="0 0 48 48">

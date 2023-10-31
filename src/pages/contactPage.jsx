@@ -1,48 +1,45 @@
-import React from 'react'
-import { useState } from 'react'
-import axios from 'axios'
+import React, {useEffect, useRef} from 'react'
+import emailjs from 'emailjs-com'
+import Swal from 'sweetalert2'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const ContactPage = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-  const info = {
-    name : name,
-    email : email,
-    subject : subject,
-    message : message
-  }
-  async function sendMail(e) {
-    e.preventDefault()
-    try {
-      const response = await axios.post('http://localhost:4202/email',info, {withCredentials : true})
-      if(response) {
-      console.log('Email sent successfully!')
-      }
-    }catch(e) {
-      console.error('Error occured:',e)
-    }
-  }
+  useEffect(() => {
+    Aos.init({duration : 2000})
+  },[])
+  const form = useRef()
+  
+  const sendMail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_g0qmbi9', 'template_wgs34w1', form.current, 'w_GU-4hoT5Cpzam9p')
+      .then((result) => {
+        Swal.fire({
+          title : 'Email sent successfully!',
+          background : 'black',
+          position : 'top',
+          customClass  :{
+            container : 'pop-up',
+            title : 'pop-title'
+          },
+          confirmButtonColor : 'gold'
+        })
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
-    <div id='ContactPage' className='contact-page'>
+    <div id='ContactPage' className='contact-page' data-aos='fade-up'>
     <div className='responsive'>
     <h2 className='contact-header'>Interested ? Lets get in Touch</h2>
     </div>
     <div className='responsive'>
-    <form onSubmit={sendMail} className='contact-info'>
-      <input type="text" name="name" id="userName" placeholder='name' required
-      value={name}
-      onChange={(e) => setName(e.target.value)}/>
-      <input type="email" name="email" id="email" placeholder='Email Address' required
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}/>
-      <input type="text" name="subject" id="subject" placeholder='subject' required
-      value={subject}
-      onChange={(e) => setSubject(e.target.value)}/>
-      <textarea name="message" id="message" placeholder='Your Message'  required
-      value={message}
-      onChange={(e) => setMessage(e.target.value)}/>
+    <form ref={form} onSubmit={sendMail} className='contact-info'>
+      <input type="text" name="name" id="userName" placeholder='name' required/>
+      <input type="email" name="email" id="email" placeholder='Email Address' required/>
+      <input type="text" name="subject" id="subject" placeholder='subject' required/>
+      <textarea name="message" id="message" placeholder='Your Message'  required/>
       <button type='submit'>send Message</button>
     </form>
     </div>
