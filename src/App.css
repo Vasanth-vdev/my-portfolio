@@ -36,6 +36,9 @@
   z-index: 999;
   width: 100%;
 }
+.header li {
+  font-size: clamp(0.8rem,2vw,1.5rem);
+}
 /* About page */
 .scrollBar {
   padding-top: 10em;
