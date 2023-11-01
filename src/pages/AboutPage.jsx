@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import {Cursor} from 'react-simple-typewriter'
-import photo from '../assets/photo.jpg'
+import photo from '../assets/monkey.jpg'
 import {useTypewriter} from 'react-simple-typewriter'
 import SkillsPage from './SkillsPage'
 import ProjectPage from './ProjectPage'

@@ -104,8 +104,8 @@ li:hover {
 }
 
 img {
-  width: clamp(200px,30vw,500px);
-  height: clamp(200px,30vw,500px);
+  width: clamp(150px,25vw,500px);
+  height: clamp(150px,25vw,500px);
 }
 .imageContainer{
   width: clamp(200px,30vw,500px);
@@ -113,26 +113,8 @@ img {
   margin: 1rem auto;
   border-radius: 1rem;
   opacity: 0;
-  transition: opacity 1s ease-in;
-  animation:imageOpacity 2s forwards,shadow 3s infinite ;
-}
-@keyframes imageOpacity {
-  to {
-    opacity: 1;
-  }
 }
 
-@keyframes shadow {
-  0% {
-    box-shadow: 0 0 60px rgba(255, 0, 0, 0.306);
-  }
-  50% {
-    box-shadow: 0 0 60px rgba(0,0,255,0.3);
-  }
-  100% {
-    box-shadow: 0 0 60px rgba(255, 0, 0, 0.306);
-  }
-}
 .myPassion {
   padding: 0.5rem 1rem;
   margin: 1rem;
