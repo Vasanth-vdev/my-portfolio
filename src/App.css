@@ -113,6 +113,8 @@ img {
   margin: 1rem auto;
   border-radius: 1rem;
   opacity: 0;
+  display: grid;
+  place-items: center;
 }
 
 .myPassion {
